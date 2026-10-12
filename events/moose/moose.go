@@ -1877,7 +1877,7 @@ func formatPurchases(purchases []core.Purchase) string {
 
 	for _, p := range purchases {
 		var plan core.PurchasePlan
-		if len(p.Plans) <= 0 {
+		if len(p.Plans) == 0 {
 			log.Warn("formatting purchases: no plan in purchases")
 			continue
 		}
